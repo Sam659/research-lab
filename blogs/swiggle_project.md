@@ -23,7 +23,7 @@ We applied their research to the latent space of VAEs as a precursor to interpre
 We trained the VAE on 50k pixel art characters from the [nouns dataset](https://huggingface.co/datasets/m1guelpf/nouns). The VAE downscales the image through 4 conv layers with channel dimensions 64, 128, 512, and 1024. The model further compress the channel dimension to have a latent size of $4 \times S/16 \times S/16$. We train the model with a learning rate of $1e-3$ for 2,000,000 steps. We set the beta of the KL loss to be 0 for the first 1000 steps then linearly warm it up to 0.000001 to prevent posterior collapse. The input image size is 3 x 128 x 128 and the resulting latent size is 4 x 8 x 8.
 
 <figure style="text-align: center; width: 100%;">
-  <img src="/assets/images/original_vs_reconstructed.jpeg" alt="Original vs. Reconstructed Pixel Art Characters at Iteration 2,000,000" style="max-width: 100%;" />
+  <img src="https://drive.google.com/thumbnail?id=1dZCLqTN2ktqNy3YpwOwOOCYSAtC9KvGU&sz=w1000" alt="Original vs. Reconstructed Pixel Art Characters at Iteration 2,000,000" style="max-width: 100%;" />
   <figcaption style="color: gray; font-style: italic; display: block; width: 100%;">Original vs. Reconstructed Pixel Art Characters at Iteration 2,000,000</figcaption>
 </figure>
 
@@ -36,12 +36,12 @@ The goal is to decompose the latent into a sparse linear combination of “featu
 <div style="display: flex; justify-content: center; align-items: flex-start; gap: 20px; width: 55%">
   
   <figure style="text-align: center; width: 50%;">
-    <img src="/assets/images/l0_norm.jpeg" alt="L0 Norm measures the average number of active neurons across all pixel art characters" style="max-width: 100%;" />
+    <img src="https://drive.google.com/thumbnail?id=1U5AXObsvrndtuKzd55QGKPZGzbfOnxQ6&sz=w440" alt="L0 Norm measures the average number of active neurons across all pixel art characters" style="max-width: 100%;" />
     <figcaption style="color: gray; font-style: italic; display: block; max-width: 100%;">L0 Norm measures the average number of active neurons across all pixel art characters</figcaption>
   </figure>
 
   <figure style="text-align: center; width: 50%;">
-    <img src="/assets/images/feature_density.jpeg" alt="Histogram of log feature density" style="max-width: 100%;" />
+    <img src="https://drive.google.com/thumbnail?id=1FDajfm_BSu9yCeVzbVPYwfZ2mKiKfnN2&sz=w440" alt="Histogram of log feature density" style="max-width: 100%;" />
     <figcaption style="color: gray; font-style: italic; display: block; max-width: 100%; text-align: center;">Histogram of log feature density</figcaption>
   </figure>
 
@@ -58,13 +58,13 @@ To evaluate the features learned from the sparse autoencoder, we perform the fol
 Here is feature 176 visualized. We can reasonably deduce that it corresponds to the “factory head”.
 
 <p style="text-align: center;">
-  <img src="/assets/images/feature.png" alt="Human interpretable feature" />
+  <img src="https://drive.google.com/thumbnail?id=1M2tQCR2GtRkFppi2uf6D41PjhfIQuXcm&sz=w1000" alt="Human interpretable feature" />
 </p>
 
 To further corroborate that the feature matches our explanation, we collect the top k images with the highest feature activation and perform an ablations study to remove the feature vector from their latents.
 
 <p style="text-align: center;">
-  <img src="/assets/images/feature_topk_ablations.png" alt="Top K features ablations" />
+  <img src="https://drive.google.com/thumbnail?id=1DU0YNlPDFCqfFXAY2SjXRyBq4lruj0wp&sz=w1000" alt="Top K features ablations" />
 </p>
 
 We see that the top k images all contain the feature we’re hypothesizing and that the ablations confirm it. When we remove the “factory head” feature from the latent, it removes the “factory head” while preserving the shirt color and glasses color.
