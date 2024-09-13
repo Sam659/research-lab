@@ -6,3 +6,6 @@ tags
 .sass-cache
 _site
 Gemfile.lock
+.jekyll-cache
+.jekyll-metadata
+vendor
