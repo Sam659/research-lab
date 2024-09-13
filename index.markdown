@@ -21,13 +21,13 @@ Let us know what you think!
 
 ### 2024
 
-- [Swiggle](/swiggle/blogs/swiggle_project) - August-September
+- [Swiggle](/research-lab/blogs/swiggle_project) - August-September
 
 ## Blogs
 
 ### 2024
 
-- [People to Follow in Interpretability](/swiggle/blogs/people-to-follow-in-interpretability) - Last updated: September 12, 2024
+- [People to Follow in Interpretability](/research-lab/blogs/people-to-follow-in-interpretability) - Last updated: September 12, 2024
 - The State of Mech Interp 2024 - Coming Soon!
 
 <br>
